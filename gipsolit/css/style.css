@@ -37,7 +37,8 @@ textarea:focus {
   /* Подписи к полям */
   /* Кнопка отправки заявку */
 }
-.form-input {
+.form-input,
+.form-textarea {
   display: block;
   margin: 2rem 0;
   width: 100%;
@@ -420,48 +421,6 @@ section {
   font-weight: 700;
   font-size: 1.9rem;
 }
-/* Оформление модальных окон */
-.popup {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.popup-close {
-  position: absolute;
-  top: -1.5rem;
-  right: -2rem;
-  width: 2rem;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  font-size: 3rem;
-  color: #ffffff;
-}
-.popup-form {
-  margin-top: 3rem;
-  padding: 0;
-}
-.popup-content {
-  position: fixed;
-  left: 50%;
-  top: 10%;
-  background-color: #ffffff;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  padding: 4rem 6rem;
-  text-align: center;
-}
-.popup-header {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 700;
-}
 /* Мы развеем все опасения */
 .problems {
   position: relative;
@@ -553,19 +512,8 @@ section {
 .tour-subtitle {
   font-size: 2rem;
 }
-@media (max-width: 1199px) {
-  .feedback-form {
-    padding: 3rem 5rem;
-  }
-  .fotorama {
-    margin-bottom: 3rem;
-  }
-  .scheme {
-    background-size: 65rem;
-  }
-  .problems-list {
-    min-height: 40rem;
-  }
+.tour-form-btn {
+  padding: 1rem 1rem;
 }
 /* Дополнительные услуги */
 .upsell {
@@ -587,6 +535,110 @@ section {
 }
 .upsell-block p {
   font-size: 2rem;
+}
+/* Контакты  */
+.contacts {
+  background: #ffffff url(../img/bg-contacts.jpg) center no-repeat;
+  background-size: cover;
+  /* Заголовок для формы */
+}
+.contacts h2 {
+  font-size: 2.4rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+}
+.contacts p {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contacts-link {
+  display: inline-block;
+  color: #1a1820;
+  border-bottom: 1px dotted #1a1820;
+}
+.contacts-link:hover {
+  color: #020203;
+}
+.contacts-form h2 {
+  font-size: 1.9rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+/* Подвал сайта */
+footer {
+  padding: 3rem 0;
+}
+footer p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.footer-contacts {
+  text-align: center;
+  padding-top: auto;
+}
+.footer-dev-logo {
+  text-align: right;
+}
+.footer-dev-logo img {
+  width: 15rem;
+}
+/* Оформление модальных окон */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-close {
+  position: absolute;
+  top: -1.5rem;
+  right: -2rem;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  color: #ffffff;
+}
+.popup-form {
+  margin-top: 3rem;
+  padding: 0;
+}
+.popup-content {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 4rem 6rem;
+  text-align: center;
+}
+.popup-header {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .feedback-form {
+    padding: 3rem 5rem;
+  }
+  .fotorama {
+    margin-bottom: 3rem;
+  }
+  .scheme {
+    background-size: 65rem;
+  }
+  .problems-list {
+    min-height: 40rem;
+  }
 }
 @media (max-width: 991px) {
   .main {
@@ -643,6 +695,19 @@ section {
   .tour {
     background: none;
     background-color: #f5f5f5;
+  }
+  .contacts {
+    background: none;
+    background-color: #f5f5f5;
+  }
+  footer {
+    text-align: center;
+  }
+  .footer-contacts {
+    margin: 2rem 0;
+  }
+  .footer-dev-logo {
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
