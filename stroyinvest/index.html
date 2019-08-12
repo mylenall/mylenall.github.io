@@ -15,6 +15,10 @@
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 
+		<!-- Slick Slider -->
+		<link rel="stylesheet" href="slick/slick-theme.css">
+		<link rel="stylesheet" href="slick/slick.css">
+
 		<!-- Styles-->
 		<link href="css/main.css" rel="stylesheet">
 	</head>
@@ -45,6 +49,75 @@
 				<!-- /.row -->
 			</div>
 			<!-- /.top-nav -->
+			
+			<div class="row">
+				<div class="col-md-4">
+					<div class="left-sidebar">
+
+						<ul class="left-sidebar_menu">
+							<li><a href="#">Земля</a></li>
+							<li><a href="#">Жилая недвижимость</a></li>
+							<li><a href="#">Коммерческая недвижимость</a></li>
+							<li><a href="#">Новостройки</a></li>
+							<li><a href="#">Дома/Коттеджи</a></li>
+							<li><a href="#">Строительство</a></li>
+							<li><a href="#">Аренда</a></li>
+						</ul>
+
+						<div class="left-sidebar_object">
+							<img src="img/objects/object-prewiew-1.jpg" alt="Фото объекта">
+							<div class="left-sidebar_object-description">
+								<h3>Жилой комплекс в г. Москва</h3>
+								<p>190-квартирный 12-этажный жилой дом № 88 по ул. Ленина в микрорайоне Центральный..</p>
+								<a href="#">Узнать подробнее</a>
+							</div>
+						</div>
+
+						<div class="left-sidebar_object">
+							<img src="img/objects/object-prewiew-2.jpg" alt="Фото объекта">
+							<div class="left-sidebar_object-description">
+								<h3>Жилой комплекс в г. Москва</h3>
+								<p>190-квартирный 12-этажный жилой дом № 88 по ул. Ленина в микрорайоне Центральный..</p>
+								<a href="#">Узнать подробнее</a>
+							</div>
+						</div>
+
+					</div> <!-- /.left-sidebar -->
+				</div>
+				<!-- /.col-md-4 -->
+				<div class="col-md-8">
+					<div class="content">
+						<h2>СтройИнвест</h2>
+						<p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.</p>
+						<p>Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах. Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку. На портрете была изображена дама в меховой шляпе и боа, она сидела очень прямо и протягивала зрителю тяжелую меховую муфту, в которой целиком исчезала ее рука.</p>
+						<p>Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем</p>
+						<a href="#" class="btn btn-primary">Узнать больше о компании</a>
+					</div><!-- /.content -->
+					<div class="directions">
+						<h2>Направления деятельности</h2>
+						<div class="direction-blocks">
+							<div class="directions-block" style="background-image: url(img/directions/1.jpg);">
+								<h3>Девелоперские проекты</h3>
+							</div>
+							<div class="directions-block" style="background-image: url(img/directions/2.png);">
+								<h3>Продажа недвижимости</h3>
+							</div>
+							<div class="directions-block" style="background-image: url(img/directions/3.png);" >
+								<h3>Строительство</h3>
+							</div>
+							<div class="directions-block" style="background-image: url(img/directions/4.png);">
+								<h3>Инвестиционные программы</h3>
+							</div>
+							<div class="directions-block" style="background-image: url(img/directions/2.png);">
+								<h3>Финансовые инструменты</h3>
+							</div>
+						</div> <!-- direction-blocks -->
+					</div>
+				</div>
+				<!-- /.col-md-8 -->
+			</div>
+			<!-- /.row -->
+
 		</div><!-- /.container -->
 
 
@@ -53,5 +126,16 @@
 		<!-- Если jquery не подгрузился с SDN, то подгружаем с локальной папки -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.slim.min.js"><\/script>')</script>
+
+		<!-- Подключаем slick slider -->
+		<script src="slick/slick.js"></script>
+		<script>
+			$('.direction-blocks').slick({
+				arrows: false,
+				dots: true,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+			});
+		</script>
 	</body>
 </html>
