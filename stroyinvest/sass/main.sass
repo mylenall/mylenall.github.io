@@ -1,5 +1,6 @@
 @import "colors"
 @import "reset"
+@import "fontell"
 
 html
 	font-size: 14px
@@ -124,3 +125,52 @@ h2
 	width: 170px
 .slick-list
 	margin-right: -40px
+
+.footer
+	margin-top: 60px
+	background-color: $dark
+	color: $footer-text
+	padding: 39px 0
+	&-policy-link
+		font-size: 12px
+	p 
+		margin-bottom: 14px
+	a 
+		color: $footer-text
+		text-decoration: none
+		&:hover
+			color: $white
+	small
+		display: block
+		margin-top: 56px
+		line-height: 16px
+		font-size: 10px
+		max-width: 80%
+	ul
+		padding: 0
+		list-style: none
+		li 
+			line-height: 32px
+	&-contacts
+		text-align: right
+		&_phone
+			font-weight: 400
+			font-size: 20px
+			color: $active-color
+	&-social-links
+		@extend .footer-contacts
+		li 
+			display: inline-block
+			a 
+				display: inline-block
+				width: 42px
+				height: 42px
+				background-color: rgba($white, 0.1)
+				text-align: center
+				line-height: 42px
+				border-radius: 50%
+				margin-left: 10px
+				transition: all 0.2s
+				&:hover
+					background-color: rgba($white, 0.9)
+					color: $dark
