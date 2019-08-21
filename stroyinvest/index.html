@@ -28,13 +28,16 @@
 		<div class="container">
 			<div class="top-nav">
 				<div class="row justify-content-between align-items-center">
-					<div class="col-md-auto">
+					<div class="col-xl">
 						<div class="logo">
 							<img src="img/logo.png" alt="СтройИнвест">
 						</div>
 					</div>
 					<!-- /.col-md -->
-					<div class="col-md-auto">
+					<div class="col-xl">
+						<button class="top-nav_btn">
+							<i class="icon-menu"></i>
+						</button>
 						<ul class="top-nav_menu">
 							<li><a href="#">Главная</a></li>
 							<li><a href="#">О компании</a></li>
@@ -42,6 +45,7 @@
 							<li><a href="#">Структура</a></li>
 							<li><a href="#">Инвесторам</a></li>
 							<li><a href="#">Контакты</a></li>
+							
 						</ul>
 					</div>
 					<!-- /.col-md -->
@@ -51,9 +55,11 @@
 			<!-- /.top-nav -->
 			
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="left-sidebar">
-
+						<div class="left-sidebar_btn">
+							Категории
+						</div>
 						<ul class="left-sidebar_menu">
 							<li><a href="#">Земля</a></li>
 							<li><a href="#">Жилая недвижимость</a></li>
@@ -85,7 +91,7 @@
 					</div> <!-- /.left-sidebar -->
 				</div>
 				<!-- /.col-md-4 -->
-				<div class="col-md-8">
+				<div class="col-lg-8">
 					<div class="content">
 						<h2>СтройИнвест</h2>
 						<p>Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.</p>
@@ -133,7 +139,7 @@
 						</div>
 					</div>
 					<!-- /.col-md -->
-					<div class="col-md-2">
+					<div class="col-md-2 col-6">
 						<ul class="footer_menu">
 								<li><a href="#">Главная</a></li>
 								<li><a href="#">О компании</a></li>
@@ -144,7 +150,7 @@
 							</ul>
 					</div>
 					<!-- /.col-md -->
-					<div class="col-md">
+					<div class="col-md col-6">
 						<ul class="footer_menu">
 								<li><a href="#">Земля</a></li>
 								<li><a href="#">Жилая недвижимость</a></li>
@@ -181,8 +187,7 @@
 
 		<!-- Placed at the end of the document so the pages load faster -->
 		<!-- Если jquery не подгрузился с SDN, то подгружаем с локальной папки -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.slim.min.js"><\/script>')</script>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 		<!-- Подключаем slick slider -->
 		<script src="slick/slick.js"></script>
@@ -192,6 +197,33 @@
 				dots: true,
 				slidesToShow: 4,
 				slidesToScroll: 1,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					},
+				]
+			});
+		</script>
+		<!-- Выпадающее меню -->
+		<script>
+			jQuery(document).ready(function($) {
+				var menuBtn = $('.top-nav_btn');
+				var sidebarBtn = $('.left-sidebar_btn');
+				var menu = $(".top-nav_menu");
+				var sidebarMenu = $(".left-sidebar_menu");
+
+				menuBtn.on('click', function(event){
+					event.preventDefault();
+					menu.toggleClass('top-nav_menu__active');
+				});
+				sidebarBtn.on('click', function(event){
+					event.preventDefault();
+					sidebarMenu.toggleClass('left-sidebar_menu__active');
+				});
 			});
 		</script>
 	</body>
