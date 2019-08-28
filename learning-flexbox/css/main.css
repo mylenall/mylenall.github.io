@@ -1,0 +1,251 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Maven Pro', sans-serif;
+	margin: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+.main {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	min-height: 600px;
+	-ms-align-items: center;
+	align-items: center;
+	background: url(../img/main-bg.png) no-repeat center;
+	background-size: cover	;
+	position: relative;
+}
+.main-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	z-index: 0;
+	background-image: -moz-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+	background-image: -webkit-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+	background-image: -ms-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+}
+
+.header{
+	display: flex;
+	height: 10vh;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+	width: 90%;
+}
+
+.menu {
+	width: 70%;
+}
+
+.menu ul {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+}
+
+.menu-link {
+	color: #fff;
+	text-decoration: none;
+}
+
+.get-started-btn {
+	margin-left: 60px;
+	border: 1px solid #fff;
+	padding: 10px 20px;
+	border-radius: 100px;
+	text-transform: uppercase;
+}
+
+.main-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+}
+
+.main-text span {
+	display: inline-block;
+}
+
+.main-text h1 {
+	margin: 0.5rem;
+	font-size: 8rem;
+}
+
+.main-text span::after {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.main-text span::before {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.main-arrow {
+	position: relative;
+	z-index: 2;
+	height: 15vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrow-down {
+	text-align: center;
+	line-height: 55px;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
+}
+
+.table {
+	background-color: #f9fafc;
+	padding: 7rem;
+}
+
+.table-header {
+	text-align: center;
+	margin-bottom: 5rem;
+}
+
+.table-header span {
+	text-transform: uppercase;
+	font-size: 2rem;
+	color: #9fa4af;
+}
+
+.table-header span::after {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background-color: #6e45e2;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.table-header span::before {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background-color: #6e45e2;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.table-header p {
+	font-size: 1.8rem;
+	display: inline-block;
+	width: 40rem;
+	line-height: 1.4;
+	color: #9fa4af;
+}
+
+.table-header h2 {
+	color: #4f4f4f;
+	font-size: 6rem;
+	margin: 0;
+}
+
+.price-tags {
+	display: flex;
+	justify-content: space-around;
+}
+
+.price-tag {
+	background-color: #fff;
+	border-radius: 3rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	width: 27rem;
+	transition: 0.2s;
+}
+
+.price-tag:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 60px 10px rgba(204, 204, 223, 0.71);
+}
+
+.price-tag span {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	margin: 3rem auto 2rem;
+}
+
+.price-tag img {
+	width: 10rem;
+	height: 10rem;
+}
+
+.price-tag h4 {
+	font-weight: 500;
+	color: #4f4f4f;
+	font-size: 3.5rem;
+	margin: 1rem;
+}
+
+.price-tag h4 sub {
+	font-size: 1.3rem;
+}
+
+.price-tag h4 sup {
+	vertical-align: super;
+	font-size: 1.3rem;
+	margin-right: 0.5rem;
+}
+
+.price-tag p{
+	color: #9fa4af;
+}
+
+.price-btn {
+	background-color: #fff;
+	border: #9fa4af 1px solid;
+	color: #9fa4af;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 1rem 4rem;
+	border-radius: 100px;
+	transition: 0.2s;
+}
+
+.price-btn:hover {
+	background-color: #6e45e2;
+	border: none;
+}
