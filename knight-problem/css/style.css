@@ -15,11 +15,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Open Sans';
 }
 
 .current {
     background: url(../img/horse.png) center no-repeat;
     background-size: cover;
-    color: white;
-    font-family: 'Open Sans';
+    color: transparent;
 }
