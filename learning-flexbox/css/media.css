@@ -43,4 +43,12 @@
 	.social-links a{
 		font-size: 3rem;
 	}
+	.main-text span, .main-text p {
+		font-size: 2rem;
+	}
 }
+
+@media (max-width: 500px) {
+
+}
+	
