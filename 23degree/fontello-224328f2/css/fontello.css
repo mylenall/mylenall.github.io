@@ -24,13 +24,13 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  speak: none;
- 
+  
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
+  color: antiquewhite;
   /* opacity: .8; */
  
   /* For safety - reset parent styles, that can break glyph codes*/
@@ -55,5 +55,5 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-mobile:before { content: '\e800'; } /* '' */
+.icon-mobile:before { content: '\e800';} /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
