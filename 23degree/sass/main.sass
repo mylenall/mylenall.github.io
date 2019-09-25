@@ -1,5 +1,6 @@
-@import colors
 @import fontello
+
+$icons-blue: #19b5fe
 
 * 
     box-sizing: border-box
@@ -8,11 +9,15 @@ html
     font-family: 'Roboto', sans-serif
     font-size: 10px
 
+h2 
+    margin: 0
+
 .main 
     background: url(../img/main-bg.png) center center no-repeat
     background-size: cover
     height: 100vh
     position: relative
+
     
 
 .main-application
@@ -20,6 +25,8 @@ html
     flex-direction: column
     align-items: center
     color: white
+    
+    
     h3
         margin: 2rem auto
         font-weight: 100
@@ -144,3 +151,36 @@ html
     &__icon-mobile
         margin-left: 60rem
 
+
+.cost
+    padding: 3.5rem auto
+    margin: 0
+    height: 80vh
+    background: url(../img/cost-bg.png)
+    color: white
+    display: flex
+    align-items: center
+    flex-direction: column
+    h2
+        margin: 2.5rem
+        font-size: 2.8rem
+        font-weight: 100
+        &::after   
+            content: ""
+            width: 110%
+            height: 1px
+            background-color: white
+            display: flex
+            margin: 0 -5%
+    p 
+        margin: 0
+        font-size: 1.8rem
+        font-weight: 100
+        margin-bottom: 2rem
+    &-form 
+        align-self: flex-start
+        &__area, &__mode
+            padding: 2rem 1rem
+            border: 1px solid white
+            border-radius: 0.7em
+            font-size: 1.5rem

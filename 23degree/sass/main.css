@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?51202658");
+  src: url("../font/fontello.eot?51202658#iefix") format("embedded-opentype"), url("../font/fontello.woff2?51202658") format("woff2"), url("../font/fontello.woff?51202658") format("woff"), url("../font/fontello.ttf?51202658") format("truetype"), url("../font/fontello.svg?51202658#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?51202658#fontello') format('svg');
+    }
+  }
+  */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-mobile:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-menu:before {
+  content: '\f0c9';
+}
+
+/* '' */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.main {
+  background: url(../img/main-bg.png) center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.main-application {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.main-application h3 {
+  margin: 2rem auto;
+  font-weight: 100;
+  font-size: 1.7rem;
+}
+
+.main-application p {
+  font-weight: 100;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+.main-application__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-application__form::after {
+  order: 0;
+  content: '';
+  width: 100%;
+}
+
+.main-application__form input {
+  display: flex;
+  flex-direction: column;
+  border-style: none;
+  margin-left: 1rem;
+  width: 26rem;
+  height: 4rem;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  outline: none;
+  font-size: 1.3rem;
+}
+
+.main-application__form a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  order: 2;
+  margin-top: 2rem;
+  width: 22rem;
+  height: 5rem;
+  border-radius: 40px;
+  border-style: none;
+  outline: none;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #19b5fe;
+  text-decoration: none;
+}
+
+.main-application__form a::before {
+  content: '';
+  width: 140%;
+  height: 1px;
+  background-color: #fff;
+  vertical-align: middle;
+  margin-left: -160%;
+}
+
+.main-application__form a::after {
+  content: '';
+  width: 140%;
+  height: 1px;
+  background-color: #fff;
+  vertical-align: middle;
+  margin-right: -160%;
+}
+
+.main-headings {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.main-headings h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  margin: 20px 0 0 0;
+}
+
+.main-headings h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.icon-mobile {
+  font-size: 320%;
+}
+
+.icon-menu {
+  font-size: 230%;
+}
+
+.main-nav {
+  height: 10vh;
+  padding: 5rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.main-nav__logo {
+  font-size: 2rem;
+}
+
+.main-nav__logo-circle {
+  padding: 1rem;
+  background: #19b5fe;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.main-nav__logo-circle span {
+  font-weight: 900;
+  background: url(../img/main-bg.png);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-nav__logo-text {
+  font-weight: 700;
+  margin-left: 0.3rem;
+  color: white;
+}
+
+.main-nav__tel {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: 25rem;
+}
+
+.main-nav__tel span {
+  font-size: 1rem;
+  margin: 0;
+  display: block;
+}
+
+.main-nav__tel p {
+  font-size: 1.7rem;
+  margin: 0;
+  display: block;
+}
+
+.main-nav__menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-nav__menu span {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+.main-nav__icon-mobile {
+  margin-left: 60rem;
+}
+
+.cost {
+  padding: 3.5rem auto;
+  margin: 0;
+  height: 80vh;
+  background: url(../img/cost-bg.png);
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cost h2 {
+  margin: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 100;
+}
+
+.cost h2::after {
+  content: "";
+  width: 110%;
+  height: 1px;
+  background-color: white;
+  display: flex;
+  margin: 0 -5%;
+}
+
+.cost p {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.cost-form {
+  align-self: flex-start;
+}
+
+.cost-form__area, .cost-form__mode {
+  padding: 2rem 1rem;
+  border: 1px solid white;
+  border-radius: 0.7em;
+  font-size: 1.5rem;
+}
