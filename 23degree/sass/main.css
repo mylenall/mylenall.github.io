@@ -116,23 +116,6 @@ h2 {
   font-size: 1.3rem;
 }
 
-.main-application__form a {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  order: 2;
-  margin-top: 2rem;
-  width: 22rem;
-  height: 5rem;
-  border-radius: 40px;
-  border-style: none;
-  outline: none;
-  color: white;
-  font-size: 1.5rem;
-  background-color: #19b5fe;
-  text-decoration: none;
-}
-
 .main-application__form a::before {
   content: '';
   width: 140%;
@@ -149,6 +132,23 @@ h2 {
   background-color: #fff;
   vertical-align: middle;
   margin-right: -160%;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  order: 2;
+  margin-top: 2rem;
+  width: 22rem;
+  height: 5rem;
+  border-radius: 40px;
+  border-style: none;
+  outline: none;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #19b5fe;
+  text-decoration: none;
 }
 
 .main-headings {
@@ -248,23 +248,30 @@ h2 {
 }
 
 .cost {
-  padding: 3.5rem auto;
+  padding: 3.5rem 10%;
   margin: 0;
   height: 80vh;
   background: url(../img/cost-bg.png);
   color: white;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.cost h2 {
+.cost-headings {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cost-headings h2 {
   margin: 2.5rem;
   font-size: 2.8rem;
   font-weight: 100;
 }
 
-.cost h2::after {
+.cost-headings h2::after {
   content: "";
   width: 110%;
   height: 1px;
@@ -273,20 +280,100 @@ h2 {
   margin: 0 -5%;
 }
 
-.cost p {
+.cost-headings p {
   margin: 0;
   font-size: 1.8rem;
   font-weight: 100;
   margin-bottom: 2rem;
 }
 
-.cost-form {
-  align-self: flex-start;
+.cost-main {
+  display: flex;
+  margin: 0;
 }
 
-.cost-form__area, .cost-form__mode {
+.cost-main__form {
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.cost-main__form--area, .cost-main__form--mode {
   padding: 2rem 1rem;
-  border: 1px solid white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 0.7em;
   font-size: 1.5rem;
+  display: flex;
+}
+
+.cost-main__form--area {
+  flex-wrap: wrap;
+}
+
+.cost-main__form--area span {
+  align-self: center;
+  display: flex;
+  order: -2;
+  margin-bottom: 1rem;
+}
+
+.cost-main__form--area::after {
+  order: -1;
+  content: '';
+  width: 100%;
+}
+
+.cost-main__form--mode {
+  flex-wrap: wrap;
+}
+
+.cost-main__form--mode .link-btn {
+  width: 15rem;
+  margin: 0;
+  height: 4rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+.cost-main__form--mode span {
+  align-self: center;
+  display: flex;
+  order: -2;
+  margin-bottom: 1rem;
+}
+
+.cost-main__form--mode::after {
+  order: -1;
+  content: '';
+  width: 100%;
+}
+
+.cost-main__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 30%;
+  width: 30%;
+}
+
+.cost-main__info p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 0.8rem;
+}
+
+.cost-main__info span {
+  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.cost-main__info .link-btn {
+  order: 0;
+  width: 24rem;
+  height: 4rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }

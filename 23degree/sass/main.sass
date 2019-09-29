@@ -25,8 +25,6 @@ h2
     flex-direction: column
     align-items: center
     color: white
-    
-    
     h3
         margin: 2rem auto
         font-weight: 100
@@ -55,20 +53,6 @@ h2
             outline: none
             font-size: 1.3rem
         a
-            display: flex
-            align-items: center
-            justify-content: space-around
-            order: 2
-            margin-top: 2rem
-            width: 22rem
-            height: 5rem
-            border-radius: 40px
-            border-style: none
-            outline: none
-            color: white
-            font-size: 1.5rem
-            background-color: $icons-blue
-            text-decoration: none
             &::before
                 content: ''
                 width: 140%
@@ -83,6 +67,23 @@ h2
                 background-color: #fff
                 vertical-align: middle
                 margin-right: -160%
+
+.link-btn
+    display: flex
+    align-items: center
+    justify-content: space-around
+    order: 2
+    margin-top: 2rem
+    width: 22rem
+    height: 5rem
+    border-radius: 40px
+    border-style: none
+    outline: none
+    color: white
+    font-size: 1.5rem
+    background-color: $icons-blue
+    text-decoration: none
+    
 .main-headings 
     display: flex
     color: white
@@ -153,34 +154,107 @@ h2
 
 
 .cost
-    padding: 3.5rem auto
+    padding: 3.5rem 10%
     margin: 0
     height: 80vh
     background: url(../img/cost-bg.png)
     color: white
     display: flex
-    align-items: center
-    flex-direction: column
-    h2
-        margin: 2.5rem
-        font-size: 2.8rem
-        font-weight: 100
-        &::after   
-            content: ""
-            width: 110%
-            height: 1px
-            background-color: white
-            display: flex
-            margin: 0 -5%
-    p 
+    flex-wrap: wrap
+    justify-content: center
+    &-headings
         margin: 0
-        font-size: 1.8rem
-        font-weight: 100
-        margin-bottom: 2rem
-    &-form 
-        align-self: flex-start
-        &__area, &__mode
-            padding: 2rem 1rem
-            border: 1px solid white
-            border-radius: 0.7em
-            font-size: 1.5rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        h2
+            margin: 2.5rem
+            font-size: 2.8rem
+            font-weight: 100
+            &::after   
+                content: ""
+                width: 110%
+                height: 1px
+                background-color: white
+                display: flex
+                margin: 0 -5%
+        p 
+            margin: 0
+            font-size: 1.8rem
+            font-weight: 100
+            margin-bottom: 2rem
+    &-main
+        display: flex
+        margin: 0
+        &__form
+            justify-content: flex-start
+            width: 50%
+            &--area, &--mode
+                padding: 2rem 1rem
+                border: 2px solid rgba(255, 255, 255, 0.4)
+                border-radius: 0.7em
+                font-size: 1.5rem
+                display: flex
+            &--area
+                flex-wrap: wrap
+                span
+                    align-self: center
+                    display: flex
+                    order: -2
+                    margin-bottom: 1rem
+                &::after
+                    order: -1
+                    content: ''
+                    width: 100%
+            &--mode
+                flex-wrap: wrap
+                .link-btn
+                    width: 15rem
+                    margin: 0
+                    height: 4rem
+                    background-color:  rgba(0, 0, 0, 0)
+                    border: 1px solid rgba(255, 255, 255, 0.4)
+                    border-radius: 5px
+                span
+                    align-self: center
+                    display: flex
+                    order: -2
+                    margin-bottom: 1rem
+                &::after
+                    order: -1
+                    content: ''
+                    width: 100%
+                
+                
+        &__info
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            margin-left: 30%
+            width: 30%
+            p
+                margin: 0
+                font-size: 1.3rem
+                font-weight: 100
+                margin-bottom: 0.8rem
+            span
+                margin: 0
+                font-size: 2.5rem
+                margin-bottom: 0.7rem
+            .link-btn
+                order: 0
+                width: 24rem
+                height: 4rem  
+                font-size: 1.1rem
+                margin-bottom: 2rem
+                
+
+
+        
+
+
+        
+
+            
+            
