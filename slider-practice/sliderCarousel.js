@@ -7,7 +7,8 @@ class SliderCarousel{
         prev,
         infinity = false,
         position = 0,
-        slidesToShow = 3
+        slidesToShow = 3,
+        responsive = []
     }){
         this.main = document.querySelector(main);
         this.wrap = document.querySelector(wrap);
@@ -18,9 +19,12 @@ class SliderCarousel{
         this.options = {
             infinity,
             position,
-            widthSlide: Math.floor(100 / this.slidesToShow)
+            widthSlide: Math.floor(100 / this.slidesToShow),
+            maxPosition: this.slides.length - this.slidesToShow
         };
         this.position = position;
+
+        this.responsive = responsive;
     }
 
     init(){
@@ -33,6 +37,11 @@ class SliderCarousel{
             this.addArrow();
             this.controlSlider();
         }
+
+        if (this.responsive) {
+            this.responseInit();
+        }
+        
     }
 
     addClass() {
@@ -44,8 +53,11 @@ class SliderCarousel{
     }
 
     addStyle(){
-        const style = document.createElement('style');
-        style.id = 'SliderCarousel-style';
+        let style = document.getElementById('SliderCarousel-style'); 
+        if (!style) {
+            style = document.createElement('style');
+            style.id = 'SliderCarousel-style';
+        }        
         style.textContent = `
             .slider{
                 overflow: hidden;
@@ -59,7 +71,8 @@ class SliderCarousel{
 
             .slider__item{
                 display: flex !important;
-                align-items: center;
+                align-items: center !important;
+                justify-content: center !important;
                 flex: 0 0 ${this.options.widthSlide}%;
                 margin: auto 0 !important;
             }
@@ -76,16 +89,15 @@ class SliderCarousel{
         if (this.options.infinity || this.options.position > 0){
             --this.options.position;
             if (this.options.position < 0){
-                this.options.position = this.slides.length - this.slidesToShow;
+                this.options.position = this.options.maxPosition;
             }            
             this.wrap.style.transform = `translateX(-${this.options.position * this.options.widthSlide}%)`;
         }
-
     }
     nextSlider(){
-        if (this.options.infinity || this.options.position < this.slides.length - this.slidesToShow) {
+        if (this.options.infinity || this.options.position < this.options.maxPosition) {
             ++this.options.position;
-            if (this.options.position > this.slides.length - this.slidesToShow) {
+            if (this.options.position > this.options.maxPosition) {
                 this.options.position = 0;
             }
             this.wrap.style.transform = `translateX(-${this.options.position * this.options.widthSlide}%)`
@@ -126,7 +138,33 @@ class SliderCarousel{
         `;
 
         document.head.appendChild(style);
+    }
 
+    responseInit(){
+        const slidesToShowDefault = this.slidesToShow;
+        const allResponse = this.responsive.map(item => item.breakpoint);
+        const maxRespose = Math.max(... allResponse);
+
+        const checkResponse = () => {
+            const widthWindow = document.documentElement.clientWidth;
+            if (widthWindow < maxRespose) {
+                for (let i = 0; i < allResponse.length; i++){
+                    if (widthWindow < allResponse[i]){
+                        this.slidesToShow = this.responsive[i].slidesToShow;
+                        this.options.widthSlide = Math.floor(100 / this.slidesToShow);
+                        this.addStyle();
+                    } 
+                    
+                }
+            } else {
+                this.slidesToShow = slidesToShowDefault;
+                this.options.widthSlide = Math.floor(100 / this.slidesToShow);
+                this.addStyle();
+            }
+        };
+        checkResponse();
+
+        window.addEventListener('resize', checkResponse);
     }
 
 }
